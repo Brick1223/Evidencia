@@ -23,7 +23,7 @@ public class SvContabilidad extends HttpServlet {
         String concepto = request.getParameter("concepto");
         String monto = request.getParameter("monto");
 
-      System.out.println("Concepto es: " + concepto);
+        System.out.println("Concepto es: " + concepto);
         System.out.println("Monto es: " + monto);
     }
 }

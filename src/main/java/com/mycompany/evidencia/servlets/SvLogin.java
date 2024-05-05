@@ -36,14 +36,14 @@ public class SvLogin extends HttpServlet {
         // Verificar si los campos están vacíos
         if (correo == null || contrasena == null || correo.isEmpty() || contrasena.isEmpty()) {
             // Redirigir de nuevo a la página de inicio de sesión con un mensaje de error
-            response.sendRedirect("login.jsp?error=empty");
+            response.sendRedirect("Login.jsp?error=empty");
             return;
         }
 
         // Verificar si el correo tiene un formato válido
         if (!isValidEmailAddress(correo)) {
             // Redirigir de nuevo a la página de inicio de sesión con un mensaje de error
-            response.sendRedirect("login.jsp?error=invalid_email");
+            response.sendRedirect("Login.jsp?error=invalid_email");
             return;
         }
 
@@ -55,7 +55,7 @@ public class SvLogin extends HttpServlet {
             response.sendRedirect("dashboard.jsp");
         } else {
             // Redirigir de nuevo a la página de inicio de sesión con un mensaje de error
-            response.sendRedirect("login.jsp?error=invalid_credentials");
+            response.sendRedirect("Login.jsp?error=invalid_credentials");
         }
     }
 
